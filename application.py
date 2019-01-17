@@ -2,6 +2,8 @@ import os
 os.environ['KIVY_GL_BACKEND'] = 'gl'
 import kivy
 import random
+import time
+import grovepi
 
 from kivy.app import App
 from kivy.uix.button import Button
@@ -16,10 +18,17 @@ blue =  [0,0,1,1]
 purple = [0.5,0,1,1]
 pink = [1,0,1,1]
 
+# Connect the Grove Relay to digital port D8 ( SIG,NC,VCC,GND)
+relay = 8
+grovepi.pinMode(relay,"OUTPUT")
+
 def press_callback(obj):
         print("Button pressed")
         if obj.text=='Exit':
                 App.get_running_app().stop()
+        if obj.background_color==color[6]
+              
+        if obj.background_color==color[7]
 
 ########################################################################
 class MyApp(App):
